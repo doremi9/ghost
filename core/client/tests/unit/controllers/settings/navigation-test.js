@@ -27,8 +27,8 @@ describeModule(
     function () {
         it('blogUrl: captures config and ensures trailing slash', function () {
             let ctrl = this.subject();
-            ctrl.set('config.blogUrl', 'http://localhost:8080/blog');
-            expect(ctrl.get('blogUrl')).to.equal('http://localhost:8080/blog/');
+            ctrl.set('config.blogUrl', 'http://localhost:2368/blog');
+            expect(ctrl.get('blogUrl')).to.equal('http://localhost:2368/blog/');
         });
 
         it('init: creates a new navigation item', function () {
@@ -42,8 +42,8 @@ describeModule(
 
         it('blogUrl: captures config and ensures trailing slash', function () {
             let ctrl = this.subject();
-            ctrl.set('config.blogUrl', 'http://localhost:8080/blog');
-            expect(ctrl.get('blogUrl')).to.equal('http://localhost:8080/blog/');
+            ctrl.set('config.blogUrl', 'http://localhost:2368/blog');
+            expect(ctrl.get('blogUrl')).to.equal('http://localhost:2368/blog/');
         });
 
         it('save: validates nav items', function (done) {

@@ -16,7 +16,7 @@ describe('checkSSL', function () {
         next = sandbox.spy();
 
         configUtils.set({
-            url: 'http://default.com:8081/'
+            url: 'http://default.com:2368/'
         });
     });
 
@@ -67,7 +67,7 @@ describe('checkSSL', function () {
         res.isAdmin = true;
         req.secure = true;
         configUtils.set({
-            url: 'http://default.com:8081/',
+            url: 'http://default.com:2368/',
             forceAdminSSL: true
         });
         checkSSL(req, res, next);
@@ -82,14 +82,14 @@ describe('checkSSL', function () {
         res.redirect = {};
         req.secure = false;
         configUtils.set({
-            url: 'http://default.com:8081/',
+            url: 'http://default.com:2368/',
             urlSSL: '',
             forceAdminSSL: true
         });
         sandbox.stub(res, 'redirect', function (statusCode, url) {
             statusCode.should.eql(301);
             url.should.not.be.empty();
-            url.should.eql('https://default.com:8081/ghost/');
+            url.should.eql('https://default.com:2368/ghost/');
             return;
         });
         checkSSL(req, res, next);
@@ -103,14 +103,14 @@ describe('checkSSL', function () {
         res.redirect = {};
         req.secure = false;
         configUtils.set({
-            url: 'http://default.com:8081/blog/',
+            url: 'http://default.com:2368/blog/',
             urlSSL: '',
             forceAdminSSL: true
         });
         sandbox.stub(res, 'redirect', function (statusCode, url) {
             statusCode.should.eql(301);
             url.should.not.be.empty();
-            url.should.eql('https://default.com:8081/blog/ghost/');
+            url.should.eql('https://default.com:2368/blog/ghost/');
             return;
         });
         checkSSL(req, res, next);
@@ -127,14 +127,14 @@ describe('checkSSL', function () {
         res.redirect = {};
         req.secure = false;
         configUtils.set({
-            url: 'http://default.com:8081/',
+            url: 'http://default.com:2368/',
             urlSSL: '',
             forceAdminSSL: true
         });
         sandbox.stub(res, 'redirect', function (statusCode, url) {
             statusCode.should.eql(301);
             url.should.not.be.empty();
-            url.should.eql('https://default.com:8081/ghost/?test=true');
+            url.should.eql('https://default.com:2368/ghost/?test=true');
             return;
         });
         checkSSL(req, res, next);
@@ -147,14 +147,14 @@ describe('checkSSL', function () {
         req.secure = false;
         res.redirect = {};
         configUtils.set({
-            url: 'https://default.com:8081',
+            url: 'https://default.com:2368',
             urlSSL: '',
             forceAdminSSL: true
         });
         sandbox.stub(res, 'redirect', function (statusCode, url) {
             statusCode.should.eql(301);
             url.should.not.be.empty();
-            url.should.eql('https://default.com:8081/');
+            url.should.eql('https://default.com:2368/');
             return;
         });
         checkSSL(req, res, next);
@@ -168,14 +168,14 @@ describe('checkSSL', function () {
         res.redirect = {};
         req.secure = false;
         configUtils.set({
-            url: 'http://default.com:8081/',
-            urlSSL: 'https://ssl-domain.com:8081/',
+            url: 'http://default.com:2368/',
+            urlSSL: 'https://ssl-domain.com:2368/',
             forceAdminSSL: true
         });
         sandbox.stub(res, 'redirect', function (statusCode, url) {
             statusCode.should.eql(301);
             url.should.not.be.empty();
-            url.should.eql('https://ssl-domain.com:8081/ghost/');
+            url.should.eql('https://ssl-domain.com:2368/ghost/');
             return;
         });
         checkSSL(req, res, next);
@@ -189,7 +189,7 @@ describe('checkSSL', function () {
         res.sendStatus = {};
         req.secure = false;
         configUtils.set({
-            url: 'http://default.com:8081/',
+            url: 'http://default.com:2368/',
             forceAdminSSL: {
                 redirect: false
             }

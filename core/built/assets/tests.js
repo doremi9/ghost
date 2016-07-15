@@ -4848,7 +4848,7 @@ define('ghost/tests/integration/components/gh-navigation-test', ['exports', 'cha
             navItems.pushObject(_ghostModelsNavigationItem['default'].create({ label: 'Third', url: '/third' }));
             navItems.pushObject(_ghostModelsNavigationItem['default'].create({ label: '', url: '', last: true }));
             this.set('navigationItems', navItems);
-            this.set('blogUrl', 'http://localhost:8080');
+            this.set('blogUrl', 'http://localhost:2368');
 
             this.on('moveItem', function (oldIndex, newIndex) {
                 (0, _chai.expect)(oldIndex).to.equal(expectedOldIndex);
@@ -5027,7 +5027,7 @@ define('ghost/tests/integration/components/gh-navitem-test', ['exports', 'chai',
         integration: true
     }, function () {
         beforeEach(function () {
-            this.set('baseUrl', 'http://localhost:8080');
+            this.set('baseUrl', 'http://localhost:2368');
         });
 
         (0, _emberMocha.it)('renders', function () {
@@ -5541,7 +5541,7 @@ define('ghost/tests/integration/components/gh-navitem-url-input-test', ['exports
         });
 
         (0, _emberMocha.it)('renders correctly with absolute urls', function () {
-            this.set('url', 'https://example.com:8080/#test');
+            this.set('url', 'https://example.com:2368/#test');
             this.render(_ember['default'].HTMLBars.template((function () {
                 return {
                     meta: {
@@ -5588,7 +5588,7 @@ define('ghost/tests/integration/components/gh-navitem-url-input-test', ['exports
             })()));
             var $input = this.$('input');
 
-            (0, _chai.expect)($input.val()).to.equal('https://example.com:8080/#test');
+            (0, _chai.expect)($input.val()).to.equal('https://example.com:2368/#test');
 
             this.set('url', 'mailto:test@example.com');
             (0, _chai.expect)($input.val()).to.equal('mailto:test@example.com');
@@ -7395,7 +7395,7 @@ define('ghost/tests/integration/components/gh-tag-settings-form-test', ['exports
     var run = _ember['default'].run;
 
     var configStub = _ember['default'].Service.extend({
-        blogUrl: 'http://localhost:8080'
+        blogUrl: 'http://localhost:2368'
     });
 
     var mediaQueriesStub = _ember['default'].Service.extend({
@@ -8050,7 +8050,7 @@ define('ghost/tests/integration/components/gh-tag-settings-form-test', ['exports
                     templates: []
                 };
             })()));
-            (0, _chai.expect)(this.$('.seo-preview-link').text(), 'adds url and tag prefix').to.equal('http://localhost:8080/tag/test/');
+            (0, _chai.expect)(this.$('.seo-preview-link').text(), 'adds url and tag prefix').to.equal('http://localhost:2368/tag/test/');
 
             run(function () {
                 _this5.set('tag.slug', new Array(151).join('x'));
@@ -11245,8 +11245,8 @@ define('ghost/tests/unit/controllers/settings/navigation-test', ['exports', 'cha
     }, function () {
         (0, _emberMocha.it)('blogUrl: captures config and ensures trailing slash', function () {
             var ctrl = this.subject();
-            ctrl.set('config.blogUrl', 'http://localhost:8080/blog');
-            (0, _chai.expect)(ctrl.get('blogUrl')).to.equal('http://localhost:8080/blog/');
+            ctrl.set('config.blogUrl', 'http://localhost:2368/blog');
+            (0, _chai.expect)(ctrl.get('blogUrl')).to.equal('http://localhost:2368/blog/');
         });
 
         (0, _emberMocha.it)('init: creates a new navigation item', function () {
@@ -11260,8 +11260,8 @@ define('ghost/tests/unit/controllers/settings/navigation-test', ['exports', 'cha
 
         (0, _emberMocha.it)('blogUrl: captures config and ensures trailing slash', function () {
             var ctrl = this.subject();
-            ctrl.set('config.blogUrl', 'http://localhost:8080/blog');
-            (0, _chai.expect)(ctrl.get('blogUrl')).to.equal('http://localhost:8080/blog/');
+            ctrl.set('config.blogUrl', 'http://localhost:2368/blog');
+            (0, _chai.expect)(ctrl.get('blogUrl')).to.equal('http://localhost:2368/blog/');
         });
 
         (0, _emberMocha.it)('save: validates nav items', function (done) {
@@ -12565,7 +12565,7 @@ define('ghost/tests/unit/validators/nav-item-test', ['exports', 'chai', 'mocha',
         });
 
         (0, _mocha.it)('passes on valid url values', function () {
-            var validUrls = ['http://localhost:8080', 'http://localhost:8080/some-path', 'https://localhost:8080/some-path', '//localhost:8080/some-path', 'http://localhost:8080/#test', 'http://localhost:8080/?query=test&another=example', 'http://localhost:8080/?query=test&another=example#test', 'tel:01234-567890', 'mailto:test@example.com', 'http://some:user@example.com:1234', '/relative/path'];
+            var validUrls = ['http://localhost:2368', 'http://localhost:2368/some-path', 'https://localhost:2368/some-path', '//localhost:2368/some-path', 'http://localhost:2368/#test', 'http://localhost:2368/?query=test&another=example', 'http://localhost:2368/?query=test&another=example#test', 'tel:01234-567890', 'mailto:test@example.com', 'http://some:user@example.com:1234', '/relative/path'];
 
             validUrls.forEach(function (url) {
                 testValidUrl(url);

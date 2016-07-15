@@ -32,7 +32,7 @@ describe('Configuration API', function () {
             props.should.have.property('publicAPI').which.is.an.Object().with.properties('type', 'value');
 
             // Check a few values
-            props.blogUrl.should.have.property('value', 'http://127.0.0.1:8081');
+            props.blogUrl.should.have.property('value', 'http://127.0.0.1:2369');
             props.fileStorage.should.have.property('value', true);
 
             done();

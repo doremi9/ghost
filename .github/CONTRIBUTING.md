@@ -230,8 +230,8 @@ Whilst developing, you can take advantage of the [Grunt toolkit](https://github.
 
 Addresses for development:
 
-- Front-end => <http://localhost:8080>
-- Admin => <http://localhost:8080/ghost/>
+- Front-end => <http://localhost:2368>
+- Admin => <http://localhost:2368/ghost/>
 
 ### Updating with the latest changes
 

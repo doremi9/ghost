@@ -34,7 +34,7 @@ describe('postLookup', function () {
         });
 
         it('can lookup absolute url: /:slug/', function (done) {
-            var testUrl = 'http://127.0.0.1:8081/welcome-to-ghost/';
+            var testUrl = 'http://127.0.0.1:2369/welcome-to-ghost/';
 
             postLookup(testUrl).then(function (lookup) {
                 postAPIStub.calledOnce.should.be.true();
@@ -60,7 +60,7 @@ describe('postLookup', function () {
         });
 
         it('cannot lookup absolute url: /:year/:month/:day/:slug/', function (done) {
-            var testUrl = 'http://127.0.0.1:8081/2016/01/01/welcome-to-ghost/';
+            var testUrl = 'http://127.0.0.1:2369/2016/01/01/welcome-to-ghost/';
 
             postLookup(testUrl).then(function (lookup) {
                 should.not.exist(lookup);
@@ -90,7 +90,7 @@ describe('postLookup', function () {
         });
 
         it('cannot lookup absolute url: /:slug/', function (done) {
-            var testUrl = 'http://127.0.0.1:8081/welcome-to-ghost/';
+            var testUrl = 'http://127.0.0.1:2369/welcome-to-ghost/';
 
             postLookup(testUrl).then(function (lookup) {
                 should.not.exist(lookup);
@@ -108,7 +108,7 @@ describe('postLookup', function () {
         });
 
         it('can lookup absolute url: /:year/:month/:day/:slug/', function (done) {
-            var testUrl = 'http://127.0.0.1:8081/2016/01/01/welcome-to-ghost/';
+            var testUrl = 'http://127.0.0.1:2369/2016/01/01/welcome-to-ghost/';
 
             postLookup(testUrl).then(function (lookup) {
                 postAPIStub.calledOnce.should.be.true();
@@ -146,7 +146,7 @@ describe('postLookup', function () {
         });
 
         it('can lookup absolute url: /:slug/edit/', function (done) {
-            var testUrl = 'http://127.0.0.1:8081/welcome-to-ghost/edit/';
+            var testUrl = 'http://127.0.0.1:2369/welcome-to-ghost/edit/';
 
             postLookup(testUrl).then(function (lookup) {
                 lookup.post.should.have.property('url', '/welcome-to-ghost/');
@@ -166,7 +166,7 @@ describe('postLookup', function () {
         });
 
         it('cannot lookup absolute url: /:year/:month/:day/:slug/edit/', function (done) {
-            var testUrl = 'http://127.0.0.1:8081/2016/01/01/welcome-to-ghost/edit/';
+            var testUrl = 'http://127.0.0.1:2369/2016/01/01/welcome-to-ghost/edit/';
 
             postLookup(testUrl).then(function (lookup) {
                 should.not.exist(lookup);

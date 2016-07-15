@@ -49,7 +49,7 @@ describe('cors', function () {
     });
 
     it('should be enabled when origin is 127.0.0.1', function (done) {
-        var origin = 'http://127.0.0.1:8081';
+        var origin = 'http://127.0.0.1:2368';
 
         req.get = sinon.stub().withArgs('origin').returns(origin);
         res.get = sinon.stub().withArgs('origin').returns(origin);
@@ -64,7 +64,7 @@ describe('cors', function () {
     });
 
     it('should be enabled when origin is localhost', function (done) {
-        var origin = 'http://localhost:8081';
+        var origin = 'http://localhost:2368';
 
         req.get = sinon.stub().withArgs('origin').returns(origin);
         res.get = sinon.stub().withArgs('origin').returns(origin);

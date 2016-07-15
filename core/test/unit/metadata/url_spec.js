@@ -21,7 +21,7 @@ describe('getUrl', function () {
             slug: 'welcome-post',
             url: '/post/welcome-post/'
         }, true);
-        url.should.equal('http://127.0.0.1:8081/post/welcome-post/');
+        url.should.equal('http://127.0.0.1:2369/post/welcome-post/');
     });
 
     it('should return url for a tag', function () {
@@ -42,7 +42,7 @@ describe('getUrl', function () {
             parent: null,
             secure: true
         }, true);
-        url.should.equal('https://127.0.0.1:8081/tag/great/');
+        url.should.equal('https://127.0.0.1:2369/tag/great/');
     });
 
     it('should return url for a author', function () {
@@ -67,7 +67,7 @@ describe('getUrl', function () {
             slug: 'author-name',
             secure: true
         }, true);
-        url.should.equal('https://127.0.0.1:8081/author/author-name/');
+        url.should.equal('https://127.0.0.1:2369/author/author-name/');
     });
 
     it('should return url for a nav', function () {
@@ -87,7 +87,7 @@ describe('getUrl', function () {
             slug: 'about-me',
             current: true
         }, true);
-        url.should.equal('http://127.0.0.1:8081/about-me/');
+        url.should.equal('http://127.0.0.1:2369/about-me/');
     });
 
     it('should return url for a context object with relative url', function () {

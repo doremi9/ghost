@@ -14,7 +14,7 @@ function findFreePort(port) {
         }
 
         if (typeof port !== 'number') {
-            port = 8081;
+            port = 2368;
         }
 
         port = port + 1;

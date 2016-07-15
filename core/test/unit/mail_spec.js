@@ -190,7 +190,7 @@ describe('Mail', function () {
             mailer.from().should.equal('"Test" <ghost@default.com>');
 
             // Strip Port
-            configUtils.set({url: 'http://default.com:8081/', mail: {from: null}, theme: {title: 'Test'}});
+            configUtils.set({url: 'http://default.com:2368/', mail: {from: null}, theme: {title: 'Test'}});
             mailer.from().should.equal('"Test" <ghost@default.com>');
         });
 
@@ -238,7 +238,7 @@ describe('Mail', function () {
         });
 
         it('should use default title if not theme title is provided', function () {
-            configUtils.set({url: 'http://default.com:8081/', mail: {from: null}, theme: {title: null}});
+            configUtils.set({url: 'http://default.com:2368/', mail: {from: null}, theme: {title: null}});
 
             mailer = new GhostMail();
 
