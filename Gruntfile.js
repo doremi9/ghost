@@ -375,16 +375,6 @@ var _              = require('lodash'),
                 }
             },
 
-            // ### grunt-update-submodules
-            // Grunt task to update git submodules
-            // update_submodules: {
-            //     default: {
-            //         options: {
-            //             params: '--init'
-            //         }
-            //     }
-            // },
-
             uglify: {
                 prod: {
                     options: {
@@ -796,7 +786,6 @@ var _              = require('lodash'),
         // `grunt init --verbose` to see if there are any errors.
         grunt.registerTask('init', 'Prepare the project for development',
             ['shell:ember:init', 'shell:bower', 'assets', 'default']);
-            //['shell:ember:init', 'shell:bower', 'update_submodules', 'assets', 'default']);
 
         // ### Basic Asset Building
         // Builds and moves necessary client assets. Prod additionally builds the ember app.
