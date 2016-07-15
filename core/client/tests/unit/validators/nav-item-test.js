@@ -71,13 +71,13 @@ describe('Unit: Validator: nav-item', function () {
 
     it('passes on valid url values', function () {
         let validUrls = [
-            'http://localhost:2368',
-            'http://localhost:2368/some-path',
-            'https://localhost:2368/some-path',
-            '//localhost:2368/some-path',
-            'http://localhost:2368/#test',
-            'http://localhost:2368/?query=test&another=example',
-            'http://localhost:2368/?query=test&another=example#test',
+            'http://localhost:8080',
+            'http://localhost:8080/some-path',
+            'https://localhost:8080/some-path',
+            '//localhost:8080/some-path',
+            'http://localhost:8080/#test',
+            'http://localhost:8080/?query=test&another=example',
+            'http://localhost:8080/?query=test&another=example#test',
             'tel:01234-567890',
             'mailto:test@example.com',
             'http://some:user@example.com:1234',

@@ -15,7 +15,7 @@ describeComponent(
     },
     function () {
         beforeEach(function () {
-            this.set('baseUrl', 'http://localhost:2368');
+            this.set('baseUrl', 'http://localhost:8080');
         });
 
         it('renders', function () {

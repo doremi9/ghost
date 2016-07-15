@@ -54,13 +54,13 @@ describeComponent(
         });
 
         it('renders correctly with absolute urls', function () {
-            this.set('url', 'https://example.com:2368/#test');
+            this.set('url', 'https://example.com:8080/#test');
             this.render(hbs`
                 {{gh-navitem-url-input baseUrl=baseUrl url=url isNew=isNew change="updateUrl" clearErrors=(action "clearErrors")}}
             `);
             let $input = this.$('input');
 
-            expect($input.val()).to.equal('https://example.com:2368/#test');
+            expect($input.val()).to.equal('https://example.com:8080/#test');
 
             this.set('url', 'mailto:test@example.com');
             expect($input.val()).to.equal('mailto:test@example.com');

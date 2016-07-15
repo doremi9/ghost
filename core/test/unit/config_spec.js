@@ -783,12 +783,12 @@ describe('Config', function () {
         });
 
         it('allows server to have a host and a port', function (done) {
-            overrideReadFileConfig({server: {host: '127.0.0.1', port: '2368'}});
+            overrideReadFileConfig({server: {host: '127.0.0.1', port: '8081'}});
 
             config.load().then(function (localConfig) {
                 should.exist(localConfig);
                 localConfig.server.host.should.equal('127.0.0.1');
-                localConfig.server.port.should.equal('2368');
+                localConfig.server.port.should.equal('8081');
 
                 done();
             }).catch(done);
@@ -808,7 +808,7 @@ describe('Config', function () {
         });
 
         it('rejects server if there is a port but no host', function (done) {
-            overrideReadFileConfig({server: {port: '2368'}});
+            overrideReadFileConfig({server: {port: '8081'}});
 
             config.load().then(function () {
                 done(expectedError);

@@ -12,7 +12,7 @@ import DS from 'ember-data';
 const {run} = Ember;
 
 let configStub = Ember.Service.extend({
-    blogUrl: 'http://localhost:2368'
+    blogUrl: 'http://localhost:8080'
 });
 
 let mediaQueriesStub = Ember.Service.extend({
@@ -251,7 +251,7 @@ describeComponent(
             this.render(hbs`
                 {{gh-tag-settings-form tag=tag setProperty=(action 'setProperty')}}
             `);
-            expect(this.$('.seo-preview-link').text(), 'adds url and tag prefix').to.equal('http://localhost:2368/tag/test/');
+            expect(this.$('.seo-preview-link').text(), 'adds url and tag prefix').to.equal('http://localhost:8080/tag/test/');
 
             run(() => {
                 this.set('tag.slug', (new Array(151).join('x')));

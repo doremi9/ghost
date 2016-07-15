@@ -30,7 +30,7 @@ describeComponent(
             navItems.pushObject(NavItem.create({label: 'Third', url: '/third'}));
             navItems.pushObject(NavItem.create({label: '', url: '', last: true}));
             this.set('navigationItems', navItems);
-            this.set('blogUrl', 'http://localhost:2368');
+            this.set('blogUrl', 'http://localhost:8080');
 
             this.on('moveItem', (oldIndex, newIndex) => {
                 expect(oldIndex).to.equal(expectedOldIndex);

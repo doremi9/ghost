@@ -34,7 +34,7 @@ describe('getPaginatedUrl', function () {
             var urls = getTestUrls();
 
             // Check results
-            urls.should.have.property('next', 'http://127.0.0.1:2369/page/2/');
+            urls.should.have.property('next', 'http://127.0.0.1:8081/page/2/');
             urls.should.have.property('prev', null);
             urls.should.have.property('page1', '/');
             urls.should.have.property('page5', '/page/5/');
@@ -50,8 +50,8 @@ describe('getPaginatedUrl', function () {
             var urls = getTestUrls();
 
             // Check results
-            urls.should.have.property('next', 'http://127.0.0.1:2369/page/3/');
-            urls.should.have.property('prev', 'http://127.0.0.1:2369/');
+            urls.should.have.property('next', 'http://127.0.0.1:8081/page/3/');
+            urls.should.have.property('prev', 'http://127.0.0.1:8081/');
             urls.should.have.property('page1', '/');
             urls.should.have.property('page5', '/page/5/');
             urls.should.have.property('page10', '/page/10/');
@@ -67,7 +67,7 @@ describe('getPaginatedUrl', function () {
 
             // Check results
             urls.should.have.property('next', null);
-            urls.should.have.property('prev', 'http://127.0.0.1:2369/page/9/');
+            urls.should.have.property('prev', 'http://127.0.0.1:8081/page/9/');
             urls.should.have.property('page1', '/');
             urls.should.have.property('page5', '/page/5/');
             urls.should.have.property('page10', '/page/10/');
@@ -84,7 +84,7 @@ describe('getPaginatedUrl', function () {
             var urls = getTestUrls();
 
             // Check results
-            urls.should.have.property('next', 'http://127.0.0.1:2369/featured/page/2/');
+            urls.should.have.property('next', 'http://127.0.0.1:8081/featured/page/2/');
             urls.should.have.property('prev', null);
             urls.should.have.property('page1', '/featured/');
             urls.should.have.property('page5', '/featured/page/5/');
@@ -100,8 +100,8 @@ describe('getPaginatedUrl', function () {
             var urls = getTestUrls();
 
             // Check results
-            urls.should.have.property('next', 'http://127.0.0.1:2369/featured/page/3/');
-            urls.should.have.property('prev', 'http://127.0.0.1:2369/featured/');
+            urls.should.have.property('next', 'http://127.0.0.1:8081/featured/page/3/');
+            urls.should.have.property('prev', 'http://127.0.0.1:8081/featured/');
             urls.should.have.property('page1', '/featured/');
             urls.should.have.property('page5', '/featured/page/5/');
             urls.should.have.property('page10', '/featured/page/10/');
@@ -117,7 +117,7 @@ describe('getPaginatedUrl', function () {
 
             // Check results
             urls.should.have.property('next', null);
-            urls.should.have.property('prev', 'http://127.0.0.1:2369/featured/page/9/');
+            urls.should.have.property('prev', 'http://127.0.0.1:8081/featured/page/9/');
             urls.should.have.property('page1', '/featured/');
             urls.should.have.property('page5', '/featured/page/5/');
             urls.should.have.property('page10', '/featured/page/10/');

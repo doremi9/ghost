@@ -101,6 +101,6 @@ describe('serveSharedFile', function () {
         next.called.should.be.false();
         res.writeHead.called.should.be.true();
 
-        res.end.calledWith('User-agent: http://127.0.0.1:2369').should.be.true();
+        res.end.calledWith('User-agent: http://127.0.0.1:8081').should.be.true();
     });
 });
